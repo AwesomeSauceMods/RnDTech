@@ -5,7 +5,7 @@ import com.awesomesauce.minecraft.forge.core.lib.util.ItemUtil
 import com.awesomesauce.minecraft.forge.rndtech.api._
 import com.awesomesauce.minecraft.forge.rndtech.item.ItemJournal
 import com.awesomesauce.minecraft.forge.rndtech.tile.TileEntityResearcher
-import cpw.mods.fml.common.Mod
+import cpw.mods.fml.common.{ModMetadata, Mod}
 import cpw.mods.fml.common.event.FMLInitializationEvent
 import cpw.mods.fml.common.event.FMLPostInitializationEvent
 import cpw.mods.fml.common.event.FMLPreInitializationEvent
@@ -38,6 +38,8 @@ object RnDTech extends TAwesomeSauceMod {
   def getModName: String = MODNAME
   def getTabIconItem: () => net.minecraft.item.Item = () => journal
   def getTextureDomain: String = "rndtech"
+  @Mod.Metadata("RnDTech")
+  var metadata : ModMetadata = null
   
   def preInit() = {}
   def init() = {
